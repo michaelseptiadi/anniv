@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HELLO APINGGGG</title>
+</head>
+<body>
+  <h1 class="title">HAPPY ANNIVERSARY SAYANGGG</h1>
+  <div class="container">
+    <p id="demo"></p>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+  </div>
+  <div class="envelope">
+    <p class="title-envelope">Pencet ini pas 00.00</p>
+    <input class="envelope__check" type="checkbox"/>
+    <div class="envelope__flap envelope__flap--inside"></div>
+    <div class="envelope__flap"></div>
+    <div class="envelope__letter">
+      <div class="letter">
+        <div class="letter__content">
+          <p>Hallo bebbbb 👋</p>
+          <p>Happy anniversary yang pertama yaaa bebbb,
+            <br/>
+            Makasih bebb udah mau bertahan sama aku selama ini meskipun suka marahmarahin aku terus wwkwkkwkw
+          </p>
+        </div>
+        <div class="letter__content"></div>
+        <div class="letter__content">
+          <p>Jangan tinggalin aku yaaa bebb nanti kalo kamu ninggalin aku, siapa yang ingetin aku makan dong aww 😘 nanti aku kangen gaada yang marahin aku 😘
+            <br/>
+            Pokoknya aku sayang banget sama kamu bebb, makasih yaa kamu selalu nerima aku apa adanya.
+          </p><span class="sign-off">Michael Septiadi</span>
+        </div>
+      </div>
+    </div>
+    <div class="envelope__back"></div>
+  </div>
+  
+  <img src="kita.jpg" alt="ANNIVERSARY">
+  
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Oct 22, 2023 00:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "HAPPY ANNIVERSARY &#10084;";
+        document.getElementById("demo").style.textAlign = "center";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
